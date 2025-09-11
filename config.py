@@ -1,5 +1,5 @@
 from flask import Flask
-from flask_sqlachemy import SQLAlchemy
+from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
 app.config['HOST'] = '127.0.0.1'
