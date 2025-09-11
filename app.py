@@ -1,5 +1,5 @@
 from config import app, db
-from .animal.animal_route import pet_bp 
+from animal.animal_route import pet_bp
 
 app.register_blueprint(pet_bp)
 
