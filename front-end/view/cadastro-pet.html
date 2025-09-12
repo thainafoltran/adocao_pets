@@ -33,26 +33,26 @@
 
                 <div class="form-group">
                     <label>Nome:</label>
-                    <input type="text" name="nome">
+                    <input type="text" name="nome" id="nome" required>
                 </div>
 
                 <div class="form-group">
                     <label>Espécie:</label>
-                    <input type="text" name="especie">
+                    <input type="text" name="especie" id="especie" required>
                 </div>
 
                 <div class="form-group">
                     <label>Localização:</label>
-                    <input type="text" name="localizacao">
+                    <input type="text" name="localizacao" id="localizacao" required>
                 </div>
 
                 <div class="form-group">
                     <label>Idade:</label>
-                    <input type="text" name="idade">
+                    <input type="text" name="idade" id="idade" required>
                 </div>
 
                 <div class="form-group" style="text-align: center;">
-                    <button type="submit" onclick="cadastrarPet()">Cadastrar</button>
+                    <input type="button" id="submit" value="Cadastrar" onclick="cadastroPet()" class="form-button">
                 </div>
             </form>
         </div>

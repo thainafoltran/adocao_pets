@@ -1,4 +1,4 @@
-const url = 'http://127.0.0.1:5000/users/pets'
+const url = 'http://127.0.0.1:5000/pets'
 
 async function cadastroPet(){
 

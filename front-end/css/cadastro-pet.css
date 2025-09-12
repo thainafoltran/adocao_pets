@@ -31,7 +31,7 @@ input {
     border: 1px solid #ccc;
 }
 
-button {
+.form-button {
     background-color: #ff8c42;
     color: #fff;
     padding: 12px 20px;
@@ -39,8 +39,9 @@ button {
     border-radius: 6px;
     cursor: pointer;
     font-weight: bold;
+    width: auto;
 }
 
-button:hover {
+.form-button:hover {
     background-color: #e17835;
 }
