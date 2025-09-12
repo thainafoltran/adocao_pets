@@ -1,0 +1,60 @@
+/* Config */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #FFF8F0;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Cabeçalho */
+header {
+    border: 1px red solid;
+    background-color: #FFF;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    color: #FF8C42
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #5C6BC0;
+    font-weight: bold;
+}
+
+nav a:hover {
+  color: #FF8C42;
+}
+
+/* Rodapé */
+footer {
+    background-color: #eee;
+    text-align: left;
+    padding: 20px 80px;
+    margin-top: 40px;
+    color: #666;
+}
+
+footer h4 {
+    color: #333;
+}
+
+footer ul {
+    list-style: none;
+}
