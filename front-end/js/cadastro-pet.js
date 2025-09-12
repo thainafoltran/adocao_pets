@@ -26,6 +26,7 @@ async function cadastroPet(){
         let resposta = await api.json();
         console.log(resposta)
         alert('Cadastro Realizado!')
+        window.location.href = "../index.html"
         return
     }
 
