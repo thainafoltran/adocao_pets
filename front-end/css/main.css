@@ -14,12 +14,12 @@ body {
 
 /* Cabeçalho */
 header {
-    border: 1px red solid;
     background-color: #FFF;
     padding: 15px 30px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
 header h1 {
@@ -42,6 +42,11 @@ nav a:hover {
   color: #FF8C42;
 }
 
+/* Seções */
+section {
+  padding: 60px 20px;
+}
+
 /* Rodapé */
 footer {
     background-color: #eee;
@@ -57,4 +62,8 @@ footer h4 {
 
 footer ul {
     list-style: none;
+}
+
+footer li {
+    margin-top: 10px;
 }

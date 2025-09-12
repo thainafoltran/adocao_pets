@@ -16,38 +16,43 @@
         <h1>🐾 Adote AUmor</h1>
         <nav>
             <ul>
-                <li><a href="../index.html">Inicio</a></li>
-                <li>Animais para adoção</li>
-                <li>Como ajudar</li>
-                <li>Sobre nós</li>
-                <li>Contato</li>
+                <li><a href="../index.html">Início</a></li>
+                <li><a href="">Animais para adoção</a></li>
+                <li><a href="">Como ajudar</a></li>
+                <li><a href="">Sobre nós</a></li>
+                <li><a href="">Contato</a></li>
             </ul>
         </nav>
     </header>
 
     <!-- Conteúdo -->
     <section>
-        <h1> Cadastrar Animal </h1>
-        <div>
-            <form id="cadastro-animal">
-                <div>
+        <div class="form-container">
+            <h2>Cadastrar Pet</h2>
+            <form>
+
+                <div class="form-group">
                     <label>Nome:</label>
-                    <input type="text" id="nome" name="nome">
+                    <input type="text" name="nome">
                 </div>
-                <div>
-                    <label>Raça:</label>
-                    <input type="text" id="especie" name="especie">
+
+                <div class="form-group">
+                    <label>Espécie:</label>
+                    <input type="text" name="especie">
                 </div>
-                <div>
+
+                <div class="form-group">
                     <label>Localização:</label>
-                    <input type="text" id="localizacao" name="localizacao">
+                    <input type="text" name="localizacao">
                 </div>
-                <div>
+
+                <div class="form-group">
                     <label>Idade:</label>
-                    <input type="text" id="idade" name="idade">
+                    <input type="text" name="idade">
                 </div>
-                <div>
-                    <input type="button" id="submit" value="Cadastrar" onclick="cadastroPet()">
+
+                <div class="form-group" style="text-align: center;">
+                    <button type="submit" onclick="cadastrarPet()">Cadastrar</button>
                 </div>
             </form>
         </div>
