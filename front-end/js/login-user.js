@@ -1,6 +1,6 @@
 const url = 'http://127.0.0.1:5000/login'
 
-async function loginUsuario(){
+async function loginUser(){
     let tela = document.querySelector('body')
     tela.style.cssText = 'cursor: wait';
 
