@@ -1,4 +1,4 @@
-const url = 'http://127.0.0.1:5000/login
+const url = 'http://127.0.0.1:5000/login'
 
 async function loginUsuario(){
     let tela = document.querySelector('body')
