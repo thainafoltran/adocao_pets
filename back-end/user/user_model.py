@@ -16,6 +16,15 @@ class User(db.Model):
         self.nome = nome
         self.phone = phone
 
+    def to_dict(self):
+        return {
+            "id":self.id,
+            "nome":self.nome,
+            "email":self.email,
+            "phone":self.phone,
+            "senha":self.senha
+        }
+
 def create_new_user(user):
     user_existing = User.query.filter_by(email=user['email']).first()
     if user_existing:
@@ -52,3 +61,7 @@ def update_user(id_user, alteracao_user):
 
 def delete_user(id_user):
     pass
+
+def get_all_users():
+    users = User.query.all()
+    return[user.to_dict() for user in users]

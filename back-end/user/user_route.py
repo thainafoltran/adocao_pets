@@ -1,5 +1,5 @@
 from flask import Blueprint, request, jsonify
-from .user_model import create_new_user,update_user,delete_user
+from .user_model import create_new_user,update_user,delete_user, get_all_users
 
 bp_user = Blueprint('users', __name__)
 
@@ -28,4 +28,7 @@ def delete_user(id):
         return jsonify(user_deletado)
     except Exception as e:
         return jsonify({'erro':str(e)})
-
+    
+@bp_user.route('/users', methods=['GET'])
+def get_users():
+    return jsonify(get_all_users())

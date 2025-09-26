@@ -7,7 +7,7 @@
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='../css/main.css'>
     <link rel='stylesheet' type='text/css' media='screen' href='../css/form.css'>
-    <script src='../js/cadastro-pet.js'></script>
+    <script src='../js/cadastro-user.js'></script>
 </head>
 <body>
 
@@ -28,7 +28,7 @@
     <!-- Conteúdo -->
     <section>
         <div class="form-container">
-            <h2>Cadastrar Pet</h2>
+            <h2>Cadastro</h2>
             <form>
 
                 <div class="form-group">
@@ -37,22 +37,26 @@
                 </div>
 
                 <div class="form-group">
-                    <label>Espécie:</label>
-                    <input type="text" name="especie" id="especie" required>
+                    <label>Email:</label>
+                    <input type="text" name="email" id="email" required>
                 </div>
 
                 <div class="form-group">
-                    <label>Localização:</label>
-                    <input type="text" name="localizacao" id="localizacao" required>
+                    <label>Telefone:</label>
+                    <input type="text" name="phone" id="phone" required>
                 </div>
 
                 <div class="form-group">
-                    <label>Idade:</label>
-                    <input type="text" name="idade" id="idade" required>
+                    <label>Senha:</label>
+                    <input type="password" name="senha" id="senha" required>
                 </div>
 
                 <div class="form-group" style="text-align: center;">
-                    <input type="button" id="submit" value="Cadastrar" onclick="cadastroPet()" class="form-button">
+                    <input type="button" id="submit" value="Cadastrar" onclick="cadastroUser()" class="form-button">
+                </div>
+
+                <div class="form-group">
+                    <p>Já possui uma conta? <a href="login-user.html">Entrar</a></p>
                 </div>
             </form>
         </div>

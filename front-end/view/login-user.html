@@ -28,31 +28,25 @@
     <!-- Conteúdo -->
     <section>
         <div class="form-container">
-            <h2>Cadastrar Pet</h2>
+            <h2>Login</h2>
             <form>
 
                 <div class="form-group">
-                    <label>Nome:</label>
-                    <input type="text" name="nome" id="nome" required>
+                    <label>Email:</label>
+                    <input type="text" name="email" id="email" required>
                 </div>
 
                 <div class="form-group">
-                    <label>Espécie:</label>
-                    <input type="text" name="especie" id="especie" required>
-                </div>
-
-                <div class="form-group">
-                    <label>Localização:</label>
-                    <input type="text" name="localizacao" id="localizacao" required>
-                </div>
-
-                <div class="form-group">
-                    <label>Idade:</label>
-                    <input type="text" name="idade" id="idade" required>
+                    <label>Senha:</label>
+                    <input type="password" name="password" id="password" required>
                 </div>
 
                 <div class="form-group" style="text-align: center;">
-                    <input type="button" id="submit" value="Cadastrar" onclick="cadastroPet()" class="form-button">
+                    <input type="button" id="submit" value="Entrar" onclick="loginUser()" class="form-button">
+                </div>
+
+                <div class="form-group">
+                    <p>Não possui uma conta? <a href="cadastro-user.html">Cadastrar-se</a></p>
                 </div>
             </form>
         </div>
