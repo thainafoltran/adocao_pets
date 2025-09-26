@@ -19,24 +19,25 @@ class User(db.Model):
 def create_new_user(user):
     user_existing = User.query.filter_by(email=user['email']).first()
     if user_existing:
-        return jsonify({'msg': 'email já cadastrado'}), 400
+        return {'msg': 'Email já cadastrado'}, 400
     senha = user.get('senha', '')
-    if len(senha) != 8:
-        return jsonify({'msg':'sua senha deve ter pelo menos 8 caracteres'})
+    if len(senha) < 8:
+        return {'msg': 'Sua senha deve ter pelo menos 8 caracteres'}, 400
     novo_user = User(
-        nome= user['nome'],
-        email= user['email'],
-        senha= user['senha'],
-        phone= user['phone']
+        nome=user['nome'],
+        email=user['email'],
+        senha=user['senha'],
+        phone=user['phone']
     )
 
     db.session.add(novo_user)
     db.session.commit()
+    return {"mensagem": "User cadastrado com sucesso!"}, 201
 
 def update_user(id_user, alteracao_user):
     user = User.query.get(id_user)
     if not user:
-        return jsonify({'error':'user não cadastrado'})
+        return {'error':'user não cadastrado'}
     if "nome" in alteracao_user:
         user.nome = alteracao_user["nome"]
     if "email" in alteracao_user:

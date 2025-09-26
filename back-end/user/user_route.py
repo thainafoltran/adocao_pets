@@ -1,16 +1,16 @@
 from flask import Blueprint, request, jsonify
-from user_model import create_new_user,update_user,delete_user
+from .user_model import create_new_user,update_user,delete_user
 
 bp_user = Blueprint('users', __name__)
 
-@bp_user.route('/users',methods=['POST'])
+@bp_user.route('/users', methods=['POST'])
 def create_user():
     try:
         response = request.json
-        user = create_new_user(response)
-        return jsonify(user)
+        data, status = create_new_user(response)  
+        return jsonify(data), status
     except Exception as e:
-        return jsonify({'erro': str(e)})
+        return jsonify({'erro': str(e)}), 500
     
 @bp_user.route('/user/<id>', methods=['PUT'])
 def update_user(id):
