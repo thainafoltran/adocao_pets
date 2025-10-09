@@ -1,32 +1,160 @@
-/* Hero Section */
+/* ======= HERO SECTION ======= */
 .hero {
-    background-color: #fdebd0;
-    text-align: center;
-    padding: 150px 20px;
+  background-color: #fdebd0;
+  text-align: center;
+  padding: 100px 20px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .hero h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
 }
 
 .hero p {
-    margin-bottom: 25px;
-    font-size: 1.2rem;
+  margin-bottom: 25px;
+  font-size: 1.2rem;
 }
 
 .hero-button {
-    background-color: #ff8c42;
-    color: #fff;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    font-weight: bold;
-    width: auto;
-    text-decoration: none;
+  background-color: #ff8c42;
+  color: #fff;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  text-decoration: none;
+  display: inline-block;
 }
 
 .hero-button:hover {
-    background-color: #e17835;
+  background-color: #e17835;
+}
+
+
+/* ======= CARROSSEL ======= */
+.carousel {
+  position: relative;
+  width: 450px;
+  max-width: 90%;
+  height: 250px;
+  overflow: hidden;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  margin: 40px auto; /* espaçamento e centralização abaixo da hero */
+  text-align: center;
+}
+
+.slide {
+  display: none;
+  padding: 20px;
+  text-align: center;
+}
+
+.slide.active {
+  display: block;
+}
+
+button.prev,
+button.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.5);
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+button.prev:hover,
+button.next:hover {
+  background: rgba(0,0,0,0.7);
+}
+
+button.prev {
+  left: 10px;
+}
+
+button.next {
+  right: 10px;
+}
+
+.dots {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.dot {
+  height: 10px;
+  width: 10px;
+  margin: 0 3px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.dot.active {
+  background-color: #717171;
+}
+
+
+/* ======= BODY E LAYOUT GERAL ======= */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #f5f5f5;
+  display: flex;
+  flex-direction: column; /* organiza hero e carrossel em coluna */
+  align-items: center; /* centraliza horizontalmente */
+}
+
+header {
+  width: 100%;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  box-sizing: border-box;
+}
+
+header h1 {
+  color: #ff8c42;
+  margin: 0;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  margin: 0;
+  padding: 0;
+}
+
+header nav a {
+  color: #4a4a9f;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+header nav a:hover {
+  text-decoration: underline;
+}
+
+footer {
+  background-color: #f0f0f0;
+  width: 100%;
+  padding: 20px;
+  text-align: center;
+  box-sizing: border-box;
+  margin-top: 40px;
 }
