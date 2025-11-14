@@ -1,0 +1,311 @@
+:root {
+    --primary-color: #007bff; /* Azul principal */
+    --secondary-color: #f89406; /* Laranja (cor de "alerta" / "pet") */
+    --light-gray: #f4f4f4;
+    --dark-text: #333;
+    --light-text: #555;
+    --border-radius: 8px;
+    --box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* Ajuste do Body: removido o display:flex para um fluxo normal */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: var(--light-gray);
+    color: var(--dark-text);
+    margin: 0;
+    padding: 0; /* Removido o padding para o header ir de ponta a ponta */
+}
+
+
+.site-header {
+    background-color: #ffffff;
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    box-sizing: border-box; /* Garante que o padding não aumente a largura */
+}
+
+.site-header h1 {
+    margin: 0;
+    font-size: 24px;
+    color: var(--primary-color);
+}
+
+.site-header nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    gap: 20px; /* Espaço entre os itens do menu */
+}
+
+.site-header nav li a {
+    text-decoration: none;
+    color: var(--light-text);
+    font-weight: 600;
+    font-size: 16px;
+    padding: 10px 0;
+    transition: color 0.2s ease;
+}
+
+.site-header nav li a:hover {
+    color: var(--primary-color);
+}
+
+/* Estilo para o link da página ativa */
+.site-header nav li a.active {
+    color: var(--secondary-color);
+    font-weight: 700;
+    border-bottom: 2px solid var(--secondary-color);
+}
+
+
+
+/* Ajuste no Container: agora centralizado com margin */
+.donation-container {
+    max-width: 600px;
+    width: 90%; /* Mais flexível em telas pequenas */
+    background-color: #ffffff;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    overflow: hidden;
+    /* Centraliza o container na página, com espaço do header */
+    margin: 40px auto; 
+}
+
+/* Cabeçalho (da caixa de doação) */
+.donation-container header {
+    text-align: center;
+    padding: 30px 40px;
+    background-color: #fff;
+}
+
+.header-icon {
+    font-size: 48px;
+    margin-bottom: 10px;
+    color: var(--secondary-color); /* Cor do ícone */
+}
+
+.donation-container header h1 {
+    margin: 0 0 10px 0;
+    font-size: 28px;
+    color: var(--primary-color);
+}
+
+.donation-container header p {
+    font-size: 16px;
+    color: var(--light-text);
+    line-height: 1.6;
+}
+
+/* Corpo Principal (da caixa de doação) */
+.donation-container main {
+    padding: 0 30px 30px 30px;
+}
+
+section {
+    margin-bottom: 25px;
+    padding: 25px;
+    border: 1px solid #e0e0e0;
+    border-radius: var(--border-radius);
+}
+
+h2 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    text-align: center;
+    color: var(--dark-text);
+}
+
+/* Botões de Valor */
+.amount-selection {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.amount-btn {
+    padding: 15px;
+    font-size: 18px;
+    font-weight: 600;
+    background-color: #f9f9f9;
+    border: 2px solid #ddd;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.amount-btn:hover {
+    background-color: #e9e9e9;
+    border-color: #ccc;
+}
+
+.amount-btn:focus, .amount-btn.selected {
+    border-color: var(--primary-color);
+    background-color: #e6f2ff;
+    color: var(--primary-color);
+    outline: none;
+}
+
+/* Valor Customizado */
+.custom-amount {
+    margin-bottom: 20px;
+}
+
+.custom-amount label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: var(--light-text);
+}
+
+.custom-amount input {
+    width: 100%;
+    padding: 12px;
+    font-size: 18px;
+    border: 2px solid #ddd;
+    border-radius: var(--border-radius);
+    box-sizing: border-box; 
+}
+
+/* Botão de Ação (CTA) */
+.cta-button {
+    width: 100%;
+    padding: 18px;
+    font-size: 18px;
+    font-weight: 700;
+    color: #fff;
+    background-color: var(--secondary-color);
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    text-transform: uppercase;
+}
+
+.cta-button:hover {
+    background-color: #e58300;
+}
+
+.cta-button.secondary {
+    background-color: var(--primary-color);
+}
+.cta-button.secondary:hover {
+    background-color: #0056b3;
+}
+
+.secure-note {
+    display: block;
+    text-align: center;
+    margin-top: 15px;
+    font-size: 12px;
+    color: #888;
+}
+
+/* Outros Métodos (PIX) */
+.method-box {
+    text-align: center;
+}
+
+.pix-key {
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-radius: 4px;
+    margin: 15px 0;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 16px;
+}
+
+.pix-qr-code {
+    max-width: 180px;
+    margin: 10px auto;
+    display: block;
+    border: 1px solid #ddd;
+}
+
+
+@media (max-width: 768px) {
+    /* Ajusta o header principal */
+    .site-header {
+        flex-direction: column; /* Empilha o logo e o menu */
+        padding: 15px;
+        gap: 15px;
+    }
+
+    .site-header nav ul {
+        flex-direction: column;
+        gap: 0;
+        text-align: center;
+        width: 100%;
+    }
+    
+    .site-header nav li a {
+        padding: 10px;
+        display: block;
+        width: 100%;
+    }
+    
+    .site-header nav li a.active {
+        border-bottom: none; /* Remove a borda no celular */
+        background-color: var(--light-gray);
+    }
+    
+    /* Ajusta o container de doação */
+    .donation-container {
+        width: 95%;
+        margin: 20px auto; /* Menos margem no celular */
+    }
+
+    .donation-container header {
+        padding: 20px;
+    }
+
+    .donation-container main {
+        padding: 0 20px 20px 20px;
+    }
+
+    .amount-selection {
+        grid-template-columns: 1fr; /* Coloca os botões um embaixo do outro */
+    }
+}
+
+/* ===================
+   ESTILO DO BOTÃO FLUTUANTE DO WHATSAPP
+   =================== */
+.whatsapp-fab {
+    position: fixed;         /* Fica fixo na tela */
+    bottom: 25px;            /* Distância do fundo */
+    right: 25px;             /* Distância da direita */
+    width: 60px;             /* Largura */
+    height: 60px;            /* Altura */
+    background-color: #25D366; /* Cor verde do WhatsApp */
+    color: #FFF;
+    border-radius: 50%;      /* Deixa o botão redondo */
+    
+    /* Centraliza o ícone */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra suave */
+    z-index: 1000;           /* Garante que ele fique por cima de tudo */
+    
+    /* Animação suave */
+    transition: transform 0.2s ease;
+}
+
+/* Ajusta o tamanho da logo SVG dentro do botão */
+.whatsapp-fab svg {
+    width: 32px;
+    height: 32px;
+}
+
+/* Efeito de zoom ao passar o mouse */
+.whatsapp-fab:hover {
+    transform: scale(1.1);
+}
