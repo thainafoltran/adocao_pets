@@ -5,13 +5,14 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Cadastrar Animal</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
+    
     <link rel='stylesheet' type='text/css' media='screen' href='../css/main.css'>
     <link rel='stylesheet' type='text/css' media='screen' href='../css/form.css'>
+    
     <script src='../js/cadastro-user.js'></script>
 </head>
 <body>
 
-    <!-- Cabeçalho -->
     <header>
         <h1>🐾 Adote AUmor</h1>
         <nav>
@@ -25,12 +26,21 @@
         </nav>
     </header>
 
-    <!-- Conteúdo -->
     <section>
         <div class="form-container">
-            <h2>Cadastro</h2>
-            <form>
+            
+            <div class="toggle-container">
+                <span id="label-user" class="toggle-label active">Usuário</span>
+                <label class="switch">
+                    <input type="checkbox" id="check-funcionario" onclick="alternarModo()">
+                    <span class="slider round"></span>
+                </label>
+                <span id="label-func" class="toggle-label">Funcionário</span>
+            </div>
 
+            <h2 id="titulo-form">Cadastro</h2>
+            
+            <form>
                 <div class="form-group">
                     <label>Nome:</label>
                     <input type="text" name="nome" id="nome" required>
@@ -44,6 +54,11 @@
                 <div class="form-group">
                     <label>Telefone:</label>
                     <input type="text" name="phone" id="phone" required>
+                </div>
+                
+                <div class="form-group" id="div-matricula" style="display:none;">
+                    <label>Matrícula:</label>
+                    <input type="text" name="matricula" id="matricula">
                 </div>
 
                 <div class="form-group">
@@ -62,7 +77,6 @@
         </div>
     </section>
 
-    <!-- Rodapé -->
     <footer>
         <div>
             <h4>🐾 Equipe de desenvolvimento</h4>
@@ -73,6 +87,36 @@
             </ul>
         </div>
     </footer>
+
+    <script>
+        function alternarModo() {
+            // Elementos
+            const checkbox = document.getElementById('check-funcionario');
+            const titulo = document.getElementById('titulo-form');
+            const labelUser = document.getElementById('label-user');
+            const labelFunc = document.getElementById('label-func');
+            
+            // Lógica
+            if (checkbox.checked) {
+                // ATIVAR MODO FUNCIONÁRIO
+                document.body.classList.add('modo-funcionario');
+                titulo.innerText = "Cadastro de Funcionário";
+                
+                // Estilo dos labels do switch
+                labelFunc.classList.add('active');
+                labelUser.classList.remove('active');
+
+            } else {
+                // VOLTAR PARA MODO USUÁRIO
+                document.body.classList.remove('modo-funcionario');
+                titulo.innerText = "Cadastro";
+                
+                // Estilo dos labels do switch
+                labelUser.classList.add('active');
+                labelFunc.classList.remove('active');
+            }
+        }
+    </script>
 
 </body>
 </html>
